@@ -5,20 +5,20 @@ nav: contribute
 ---
 ### Open source contributing
 
-The project is in the public domain, and we encourage you to [contribute to it on GitHub](http://github.com/[agency]/[repo]) by improving on it or making your own apps and tools using [Agency]'s data.
+NCBI welcomes contributions to its open source projects.  Feel free to 
+submit pull requests, documentation updates and other suggestions.
 
-##### Check out the repo
+##### Check us out on GitHub
 
 <ul class="repo-list no-padding">
   <li class="list-icon">
     <p class="image-wrap">
-      <img src="http://usg-website-templates.github.io/developer-hub/static/img/octocat.png" width="25px" title="Github">
+      <img src="static/img/octocat.png" width="25px" title="Github">
     </p>
   </li>
   <li>
-    <a href="https://github.com/[agency]/[repo]">
-      <h4>[Repo]</h4>
-      <p>The open source software that runs the platform</p>
+    <a href="https://github.com/ncbi/">
+      <h4>NCBI on GitHub</h4>
     </a>
   </li>
 </ul>

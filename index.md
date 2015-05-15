@@ -5,44 +5,37 @@ layout: default
 ---
 
 ### Overview
+Welcome to PubMed Labs!
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam imperdiet tempor enim, vitae volutpat eros. Integer non tincidunt arcu. Vestibulum at rutrum metus. This data is important because:
+**PubMed Labs is all about you**. It's a new NCBI initiative for
+creating innovative and relevant products by involving you, our user
+community, from the beginning.
 
-- Donec neque lorem, vestibulum in tortor sed;
-- Elementum consequat ipsum. Mauris quam purus, feugiat vitae tortor in; and
-- Aliquet venenatis nulla. Nam massa diam, rutrum rutrum cursus eu.
+**PubMed Labs is all about innovation**. Its a place where you'll find
+innovative ideas, experimental content and new features, and an
+opportunity to suggest ideas to us.
 
-Donec quis eros accumsan, aliquet justo ut, convallis eros. Etiam justo enim, blandit eget rhoncus id, tincidunt id ipsum. Pellentesque vehicula feugiat turpis, ac sodales velit ultrices eget. Nam posuere quam nec odio tincidunt, et egestas nulla scelerisque. 
+**PubMed Labs is all about learning.** It's a place where the focus is
+on figuring out what works, where failure is OK because it's a learning
+experience, and where any idea is welcome that can improve our services
+for our users.
 
-##### Get started
-We built the API to be as self-documenting as possible, but if you find yourself overwhelmed, we organized this site into four major areas.
+**PubMed Labs is all about conversation.** It's a place where we can
+share future plans with you, and you can tell us how we're doing. It's a
+place where we all can come together to create resources that will
+benefit the broader scientific community.
 
-- [API basics](basics.html) introduces you to the operations offered by the API.
-- [API calls](console/) gives you a hands-on experience of those operations with an interactive console.
-- [Query language](queries.html) contains a comprehensive listing of all the API's types, functions, and enumerations.
-- [Field reference](fields.html) lists and describes the type of information reported in the LAR.
+When we have a new feature for you to try out, we'll post here
+with a description of it that will contain the following:
 
-<!--
-[HMDA](http://www.consumerfinance.gov/hmda) is the CFPB's first dataset to publish using [Qu](http://cfpb.github.io/qu/), an in-progress data platform created to serve public data.
+-   The user need the feature is intended to serve
 
-Qu is the first CFPB project built from the beginning on [GitHub](https://github.com/cfpb/), too. If you think you can make the API better–or just want to take a look under the hood–check it out, and learn about how you can host your own datasets or contribute to the project. 
+-   How can you activate it
 
+-   What you can expect from it
 
-<ul class="repo-list">
-  <li class="list-icon">
-    <p class="image-wrap">
-      <img src="http://usg-website-templates.github.io/developer-hub/static/img/octocat.png" width="25px" title="Github">
-    </p>
-  </li>
-  <li>
-    <a href="https://github.com/cfpb/qu">
-     <h4>Qu</h4>
-      <p>The open source software that runs the platform</p>
-    </a>
-  </li>
-</ul>
--->
-<body id="overview"></body>
+-   What are our plans for it
 
+**Join the conversation!**
 
-Not interested in programming? You can still get the data! Visit the [explore the data](URL_of_data).
+We want to hear from you.  Please [submit your feedback](#), [post issues on Github](#), or [suggest some new features](#) and we will do our best to incorporate your input.
