@@ -1,27 +1,15 @@
-CFPB Public Data API
+PubMed Labs - gh-pages site
 ====================
 
-This is the source project for the CFPB public data API at http://api.consumerfinance.gov.
+This is the source repository for the NCBI PubMed Labs micro-site.
 
-## Create a config file
+All content is in the ````gh-pages```` branch of the repository.
 
-```sh
-cp sample_config.edn config.edn
-```
+### Quick Install
 
-Edit that file with appropriate values, including MongoDB connection information.
-
-## Loading data
-
-To load the HMDA dataset, run `lein repl` and enter the following:
-
-```clj
-(-main "config.edn") ;; use the name of your config file. config.edn is an example
-(require 'qu.loader)
-(in-ns 'qu.loader)
-(load-dataset "hmda")
-```
-
-Then close your REPL, using `Ctrl-D`.
-
-This does start the web server, so you may want to use a different configuration that starts it on an unpublished port.
+````
+$ git clone https://github.com/ncbi/pubmedlabs-site.git
+$ cd pubmedlabs-site
+$ bundle install
+$ bundle exec jekyll serve
+````
