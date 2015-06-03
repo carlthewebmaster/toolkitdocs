@@ -632,7 +632,7 @@ The UTIL module implements a simple Console Debug Dump Viewer that enables the p
 
 The Console Debug Dump Viewer is implemented by the ```CDebugDumpViewer``` class. This class implements a breakpoint method called ```Bpt()```. This method is called with the name of the object and a pointer to the object to be debugged. This method prompts the user for commands that the user can type from the console:
 
-```
+```bash
     Console Debug Dump Viewer
     Stopped at  testfile.cpp(120)
     current object: myobj = xxxxxx
@@ -699,6 +699,7 @@ The following sample code shows how to perform both character- and line-based di
         s_PrintDiff("Line-based diff:", s1, s2, diffs);
     }}{% endraw %}
 ```
+
 For more detailed usage, see the test program:
 
 <http://www.ncbi.nlm.nih.gov/viewvc/v1/trunk/c%2B%2B/src/util/diff/test/>
