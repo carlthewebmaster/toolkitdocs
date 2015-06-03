@@ -632,7 +632,6 @@ The UTIL module implements a simple Console Debug Dump Viewer that enables the p
 
 The Console Debug Dump Viewer is implemented by the ```CDebugDumpViewer``` class. This class implements a breakpoint method called ```Bpt()```. This method is called with the name of the object and a pointer to the object to be debugged. This method prompts the user for commands that the user can type from the console:
 
-```bash
     Console Debug Dump Viewer
     Stopped at  testfile.cpp(120)
     current object: myobj = xxxxxx
@@ -640,7 +639,6 @@ The Console Debug Dump Viewer is implemented by the ```CDebugDumpViewer``` class
        t[ypeid]  address
        d[ump]    address  depth
        go
-```
 
 The ```CDebugDumpViewer``` class also permits the enabling and disabling of debug dump breakpoints from the [registry](ch_intro.html#ch_intro.intro_reg).
 
@@ -652,7 +650,6 @@ To use the Diff API, include ```xdiff``` in the ```LIB``` line of your applicati
 
 The following sample code shows how to perform both character- and line-based diffs:
 
-```c
     // Print difference list in human readable format
     static void s_PrintDiff(const string& msg, const string& s1, const string& s2,
         const CDiffList& diff)
@@ -698,8 +695,8 @@ The following sample code shows how to perform both character- and line-based di
         CDiffList& diffs(d.Diff(s1, s2));
         s_PrintDiff("Line-based diff:", s1, s2, diffs);
     }}{% endraw %}
-```
 
+	
 For more detailed usage, see the test program:
 
 <http://www.ncbi.nlm.nih.gov/viewvc/v1/trunk/c%2B%2B/src/util/diff/test/>
