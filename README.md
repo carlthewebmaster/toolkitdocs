@@ -24,3 +24,7 @@ $ cd THIS-REPONAME
 $ bundle install
 $ bundle exec jekyll serve
 ```
+
+More about [Jekyll](http://jekyllrb.com/docs/configuration/).
+
+Based on http://usg-website-templates.github.io/developer-hub/
