@@ -1,7 +1,7 @@
-PubMed Labs - gh-pages site
+C++ Toolkit Documentation Demo
 ====================
 
-This is the source repository for the PubMed Labs template micro-site.
+This is the source repository for the C++ Toolkit documentation demo site.
 
 All content is in the ````gh-pages```` branch of the repository.
 
@@ -9,7 +9,7 @@ All content is in the ````gh-pages```` branch of the repository.
 
 - Clone the repository:
 
-```$ git clone https://github.com/YOUR-USERNAME/THIS-REPONAME.git```
+```$ git clone https://github.com/carlthewebmaster/toolkitdocs.git```
 
 - Check out the gh-pages branch:
 
@@ -20,7 +20,7 @@ All content is in the ````gh-pages```` branch of the repository.
 - (Optional local setup using Jekyll:
 
 ```
-$ cd THIS-REPONAME
+$ cd toolkitdocs
 $ bundle install
 $ bundle exec jekyll serve
 ```
