@@ -679,22 +679,22 @@ The following sample code shows how to perform both character- and line-based di
     }
 
     // Perform a character-based diff:
-    {{
+    {% raw %}{{
         CTempString s1("how now");
         CTempString s2("brown cow");
         CDiff d;
         CDiffList& diffs(d.Diff(s1, s2));
         s_PrintDiff("Line-based diff:", s1, s2, diffs);
-    }}
+    }}{% endraw %}
 
     // Perform a line-based diff:
-    {{
+    {% raw %}{{
         CTempString s1("group 1\nasdf asf\ntttt\nasdf asd");
         CTempString s2("group 2\nqwerty\n\nasdf\nasf asd");
         CDiffText d;
         CDiffList& diffs(d.Diff(s1, s2));
         s_PrintDiff("Line-based diff:", s1, s2, diffs);
-    }}
+    }}{% endraw %}
 
 For more detailed usage, see the test program:
 
