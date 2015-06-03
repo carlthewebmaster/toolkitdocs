@@ -260,7 +260,7 @@ The CORELIB defines the ```CPipe``` class that provides a portable inter-process
 
 ### Registry
 
-<span class="nctnt highlight">N.B.``` The preferred way to define configuration parameters for an application is to use the macros in the ```CParam``` class (e.g. <span class="nctnt ncbi-macro">NCBI\_PARAM\_DECL```). More [details on the CParam class and its macros](ch_core.html#ch_core.Configuration_Parame) are presented in a later chapter. If the ```CParam``` class cannot be used, then the registry may be used instead.
+<span class="nctnt highlight">N.B.``` The preferred way to define configuration parameters for an application is to use the macros in the ```CParam``` class (e.g. ```NCBI\_PARAM\_DECL```). More [details on the CParam class and its macros](ch_core.html#ch_core.Configuration_Parame) are presented in a later chapter. If the ```CParam``` class cannot be used, then the registry may be used instead.
 
 The settings for an application may be read from a configuration or initialization file (the “registry”). This configuration file may define the parameters needed by the application. For example, many Unix programs read their parameter settings from configuration files. Similarly, Windows programs may read and store information in an internal registry database, or an initialization file.
 
@@ -270,9 +270,9 @@ More details on the [Registry](ch_core.html#ch_core.CNcbiRegistry) are presented
 
 ### STL Use Hints
 
-To minimize naming conflicts, all NCBI code is placed in the ncbi name space. The CORELIB defines a number of portable macros to help manage name space definitions. For example, you can use the <span class="nctnt ncbi-macro">BEGIN\_NAME\_SPACE``` macro at the start of a section of code to place that code in the specified name space. The <span class="nctnt ncbi-macro">END\_NAME\_SPACE``` macros is used to indicate the end the of the name space definition. To declare the use of the NCBI namespace, the macros <span class="nctnt ncbi-macro">USING\_NCBI\_SCOPE``` is used.
+To minimize naming conflicts, all NCBI code is placed in the ncbi name space. The CORELIB defines a number of portable macros to help manage name space definitions. For example, you can use the ```BEGIN\_NAME\_SPACE``` macro at the start of a section of code to place that code in the specified name space. The ```END\_NAME\_SPACE``` macros is used to indicate the end the of the name space definition. To declare the use of the NCBI namespace, the macros ```USING\_NCBI\_SCOPE``` is used.
 
-A number of macros have been defined to handle non-standard behavior of C++ compilers. For example, a macro <span class="nctnt ncbi-macro">BREAK``` is defined, that is used to break out of a loop, instead of using the break statement directly. This is done to handle a bug in the Sun WorkShop (pre 5.3 version) compiler that fails to call destructors for objects created in for-loop initializers. Another example is that some compilers (example, Sun Pro 4.2) do not understand the using namespace std; statement. Therefore, for portable code, the using namespace statement should be prohibited.
+A number of macros have been defined to handle non-standard behavior of C++ compilers. For example, a macro ```BREAK``` is defined, that is used to break out of a loop, instead of using the break statement directly. This is done to handle a bug in the Sun WorkShop (pre 5.3 version) compiler that fails to call destructors for objects created in for-loop initializers. Another example is that some compilers (example, Sun Pro 4.2) do not understand the using namespace std; statement. Therefore, for portable code, the using namespace statement should be prohibited.
 
 More details on the [use of portable macros](ch_style.html#ch_style.using_NCBI_namespace) are presented in a later chapter.
 
@@ -624,7 +624,7 @@ The checksum calculation is set up by creating a ```CChecksum``` object using th
 
 Data on which the checksum is to be computed is passed to the ```CChecksum’s``````AddLine()``` or ```AddChars()``` method as a character array. As data is passed to these methods, the CRC is computed and stored in the class. You can get the value of the computed CRC using the ```GetChecksum()``` method. Alternatively, you can use the ```WriteChecksum()``` method and pass it a ```CNcbiOstream``` object and have the CRC written to the output stream in the following syntax:
 
-/\* Original file checksum: lines: *nnnn*, chars: *nnnn*, CRC32: *xxxxxxxx* \*/
+    /\* Original file checksum: lines: *nnnn*, chars: *nnnn*, CRC32: *xxxxxxxx* \*/
 
 ### Console Debug Dump Viewer
 
@@ -632,6 +632,7 @@ The UTIL module implements a simple Console Debug Dump Viewer that enables the p
 
 The Console Debug Dump Viewer is implemented by the ```CDebugDumpViewer``` class. This class implements a breakpoint method called ```Bpt()```. This method is called with the name of the object and a pointer to the object to be debugged. This method prompts the user for commands that the user can type from the console:
 
+<pre>
     Console Debug Dump Viewer
     Stopped at  testfile.cpp(120)
     current object: myobj = xxxxxx
@@ -639,6 +640,7 @@ The Console Debug Dump Viewer is implemented by the ```CDebugDumpViewer``` class
        t[ypeid]  address
        d[ump]    address  depth
        go
+</pre>
 
 The ```CDebugDumpViewer``` class also permits the enabling and disabling of debug dump breakpoints from the [registry](ch_intro.html#ch_intro.intro_reg).
 
@@ -646,9 +648,10 @@ The ```CDebugDumpViewer``` class also permits the enabling and disabling of debu
 
 The Diff API includes the ```CDiff``` class for character-based diffs and the ```CDiffText``` class for line-based diffs. The API is based on the open source [Diff, Match and Patch Library](http://code.google.com/p/google-diff-match-patch/) and the [Diff Template Library](http://code.google.com/p/dtl-cpp/).
 
-To use the Diff API, include <span class="nctnt ncbi-lib">xdiff``` in the <span class="nctnt ncbi-macro">LIB``` line of your application makefile, and include ```\<util/diff/diff.hpp\>``` in your source.
+To use the Diff API, include ```xdiff``` in the ```LIB``` line of your application makefile, and include ```\<util/diff/diff.hpp\>``` in your source.
 
 The following sample code shows how to perform both character- and line-based diffs:
+
 
     // Print difference list in human readable format
     static void s_PrintDiff(const string& msg, const string& s1, const string& s2,
@@ -773,7 +776,7 @@ The ```CSmallDns``` has two methods that are responsible for providing the DNS n
 
 ### Regular Expressions
 
-The UTIL module defines the [CRegexp](http://www.ncbi.nlm.nih.gov/IEB/ToolBox/CPP_DOC/doxyhtml/classCRegexp.html) class that supports defining, compiling, and searching against the “Perl compatible” flavor of regular expressions (PCRE). Note that PCRE, as implemented in <span class="nctnt ncbi-lib">$(PCRE\_LIBS)```, is not actually 100% compatible with the flavor of regular expressions implemented in Perl interpreters.
+The UTIL module defines the [CRegexp](http://www.ncbi.nlm.nih.gov/IEB/ToolBox/CPP_DOC/doxyhtml/classCRegexp.html) class that supports defining, compiling, and searching against the “Perl compatible” flavor of regular expressions (PCRE). Note that PCRE, as implemented in ```$(PCRE\_LIBS)```, is not actually 100% compatible with the flavor of regular expressions implemented in Perl interpreters.
 
 A simple example of using ```CRegexp```:
 
@@ -782,7 +785,7 @@ A simple example of using ```CRegexp```:
         CRegexp regex("^(bye|exit|quit)$", CRegexp::fCompile_ignore_case);
         bool time2quit = regex.IsMatch(line);
 
-To use ```CRegexp```, link with the <span class="nctnt ncbi-lib">xregexp``` library:
+To use ```CRegexp```, link with the ```xregexp``` library:
 
     LIB  = xregexp $(PCRE_LIB) xncbi
     LIBS = $(PCRE_LIBS) $(ORIG_LIBS)
@@ -877,15 +880,15 @@ In this page
 
 Source Browsers
 
--   LXR: ```[public](http://www.ncbi.nlm.nih.gov/IEB/ToolBox/CPP_DOC/lxr/ident)<span class="bkp_prtlt_txt"> / ```[in-house](http://intranet.ncbi.nlm.nih.gov/ieb/ToolBox/CPP_DOC/lxr/ident)
--   Doxygen: ```[public](http://www.ncbi.nlm.nih.gov/IEB/ToolBox/CPP_DOC/doxyhtml)<span class="bkp_prtlt_txt"> / ```[in-house](http://intranet.ncbi.nlm.nih.gov/ieb/ToolBox/CPP_DOC/doxyhtml)
+-   LXR: [public](http://www.ncbi.nlm.nih.gov/IEB/ToolBox/CPP_DOC/lxr/ident) / [in-house](http://intranet.ncbi.nlm.nih.gov/ieb/ToolBox/CPP_DOC/lxr/ident)
+-   Doxygen: [public](http://www.ncbi.nlm.nih.gov/IEB/ToolBox/CPP_DOC/doxyhtml) / [in-house](http://intranet.ncbi.nlm.nih.gov/ieb/ToolBox/CPP_DOC/doxyhtml)
 
 SVN Source Repository
 
--   Documentation: ```[in-house](ch_getcode_svn.html#ch_getcode_svn.code_retrieval)<span class="bkp_prtlt_txt"> / ```[public](ch_getcode_svn.html#ch_getcode_svn.external)
--   Web (dev): ```[in-house](https://svn.ncbi.nlm.nih.gov/viewvc/toolkit/trunk/c++)<span class="bkp_prtlt_txt"> / ```[public](http://www.ncbi.nlm.nih.gov/viewvc/v1/trunk/c++/)
--   Web (extra): ```[in-house](https://svn.ncbi.nlm.nih.gov/viewvc/toolkit/trunk/internal/c++)
--   Web (prod): ```[in-house](https://svn.ncbi.nlm.nih.gov/viewvc/toolkit/production/components)
+-   Documentation: [in-house](ch_getcode_svn.html#ch_getcode_svn.code_retrieval) / [public](ch_getcode_svn.html#ch_getcode_svn.external)
+-   Web (dev): [in-house](https://svn.ncbi.nlm.nih.gov/viewvc/toolkit/trunk/c++) / [public](http://www.ncbi.nlm.nih.gov/viewvc/v1/trunk/c++/)
+-   Web (extra): [in-house](https://svn.ncbi.nlm.nih.gov/viewvc/toolkit/trunk/internal/c++)
+-   Web (prod): [in-house](https://svn.ncbi.nlm.nih.gov/viewvc/toolkit/production/components)
 
 Resources
 
@@ -898,36 +901,6 @@ Resources
 -   [Stable Components](http://intranet.ncbi.nlm.nih.gov/ieb/ToolBox/SC/index.html)
 -   [Release Notes](release_notes.html)
 -   [Download the Toolkit](ch_getcode_svn.html#ch_getcode_svn.ftp_download)
--   [PDF of the book](http://www.ncbi.nlm.nih.gov/toolkit/doc/book/pdf/TOC.pdf)
--   [Coding Style](ch_style.html)
--   [Mailing Lists](ch_faq.html#ch_faq.mailing_lists)
--   [<span title="Contact C++ Toolkit group">Help and Support```](mailto:cpp-doc@ncbi.nlm.nih.gov)
-
-[![Cover of The NCBI C++ Toolkit Book](img/th-toolkit-lrg.png)](toc.html "Table of Contents Page")
-The NCBI C++ Toolkit Book [Internet].
-
-Vakatov D, editor.
-
-Bethesda (MD): [National Center for Biotechnology Information (US)](http://www.ncbi.nlm.nih.gov/); 2004-.
-
--   [Table of Contents Page](toc.html)
-
-Source Browsers
-
--   [LXR](http://www.ncbi.nlm.nih.gov/IEB/ToolBox/CPP_DOC/lxr/ident)
--   [Doxygen](http://www.ncbi.nlm.nih.gov/IEB/ToolBox/CPP_DOC/lxr/ident)
-
-SVN Source Repository
-
--   [Documentation](ch_getcode_svn.html#ch_getcode_svn.external)
--   [Web (dev)](http://www.ncbi.nlm.nih.gov/viewvc/v1/trunk/c++/)
-
-Resources
-
--   [Library Search Tool](http://www.ncbi.nlm.nih.gov/IEB/ToolBox/CPP_DOC/lib_search/libsearch.cgi)
--   [Library Dependencies Tool](http://www.ncbi.nlm.nih.gov/IEB/ToolBox/CPP_DOC/depgraphs/dglistdeps.cgi)
--   [Release Notes](release_notes.html)
--   [Download](ch_getcode_svn.html#ch_getcode_svn.ftp_download)
 -   [PDF of the book](http://www.ncbi.nlm.nih.gov/toolkit/doc/book/pdf/TOC.pdf)
 -   [Coding Style](ch_style.html)
 -   [Mailing Lists](ch_faq.html#ch_faq.mailing_lists)
