@@ -1,8 +1,8 @@
-name: Developer Hub
+name: C++ Toolkit Doc Demo
 markdown: kramdown
 highlighter: pygments
 safe: true
-baseurl: /pubmedlabs-template
+baseurl: /toolkitdocs
 exclude: ['.ruby-version', 'node_modules', 'package.json', 'bower.json']
 sass:
   sass_dir: static/_sass
